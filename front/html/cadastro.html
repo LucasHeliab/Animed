@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Cadastro</title>
+  </head>
+  <body>
+    <div class="box">
+      <form id="register-form">
+        <fieldset>
+          <legend><b>Cadatre-se</b></legend>
+
+          <br />
+
+          <div class="inputBox">
+            <input
+              type="text"
+              name="nome"
+              id="nome"
+              class="inputUser"
+              data-required
+              data-min-length="3"
+              data-only-letters
+            />
+            <label for="nome">Nome completo</label>
+          </div>
+          <br /><br />
+
+          <div class="inputBox">
+            <input
+              type="text"
+              name="cpf"
+              id="cpf"
+              class="inputUser"
+              data-required
+              data-only-cpf
+            />
+            <label for="cpf">CPF</label>
+          </div>
+          <br /><br />
+
+          <div class="inputBox">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="inputUser"
+              data-required
+              data-email-validate
+            />
+            <label for="email">Email</label>
+          </div>
+          <br /><br />
+
+          <div class="inputBox">
+            <input
+              type="tel"
+              name="telefone"
+              id="telefone"
+              class="inputUser"
+              data-required
+              data-only-phone
+            />
+            <label for="telefone">Telefone</label>
+          </div>
+          <br /><br />
+
+          <div class="inputBox">
+            <input
+              type="text"
+              name="endereco"
+              id="endereco"
+              class="inputUser"
+              data-required
+              data-only-url
+            />
+            <label for="endereco">Endereço</label>
+          </div>
+          <br /><br />
+
+          <div class="inputBox">
+            <input
+              type="text"
+              name="senha"
+              id="senha"
+              class="inputUser"
+              data-required
+              data-only-url
+            />
+            <label for="senha">Senha</label>
+          </div>
+          <br /><br />
+
+          <div class="inputBox">
+            <input
+              type="text"
+              name="senha_confir"
+              id="senha_confir"
+              class="inputUser"
+              data-required
+              data-only-url
+            />
+            <label for="senha_confir">Confirme a Senha</label>
+          </div>
+          <br /><br />
+          <button>
+            <a href="index.html" name="btn_Cadastrar" id="btn_Cadastrar">
+              Cadastrar
+            </a>
+          </button>
+          <br /><br />
+          <button>
+            <a href="index.html" name="btn_Voltar" id="btn_Voltar"> Voltar </a>
+          </button>
+        </fieldset>
+      </form>
+    </div>
+    <p class="error-validation template"></p>
+  </body>
+</html>

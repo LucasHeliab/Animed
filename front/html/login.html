@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="box">
+      <form id="register-form">
+        <fieldset>
+          <legend><b>Login</b></legend>
+
+          <br />
+
+          <div class="inputBox">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="inputUser"
+              data-required
+              data-email-validate
+            />
+            <label for="email">Email</label>
+          </div>
+          <br /><br />
+
+          <div class="inputBox">
+            <input
+              type="text"
+              name="senha"
+              id="senha"
+              class="inputUser"
+              data-required
+              data-only-url
+            />
+            <label for="senha">Senha</label>
+          </div>
+          <br /><br />
+
+          <button>
+            <a href="index.html" name="btn_Login" id="btn_Login"> Login </a>
+          </button>
+          <br /><br />
+          <button>
+            <a href="index.html" name="btn_Voltar" id="btn_Voltar"> Voltar </a>
+          </button>
+        </fieldset>
+      </form>
+    </div>
+    <p class="error-validation template"></p>
+  </body>
+</html>
