@@ -5,8 +5,9 @@
 
 ### Pré-Requisitos
 <!--ts-->
- * Servidor Web
-   * XAMP ou LAMP 
+ * Baixar e intalar um dos servidores web abaixo:
+   * [XAMP](https://www.apachefriends.org/pt_br/index.html) 
+   * [LAMP](https://www.edivaldobrito.com.br/instale-lamp-no-linux-e-tenha-um-servidor-web-em-seu-pc/) 
 <!--te-->
 
 Tabela de conteúdos
