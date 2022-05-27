@@ -3,6 +3,12 @@
 <p align="center">O sistema servira para informações e agendamento de serviços na clínica veterinária.</p>
 <h4 align="center">Em construção</h4>
 
+### Pré-Requisitos
+<!--ts-->
+ * Servidor Web
+   * XAMP ou LAMP 
+<!--te-->
+
 Tabela de conteúdos
 ====================
 <!--ts-->
