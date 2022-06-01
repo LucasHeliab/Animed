@@ -1,3 +1,46 @@
+<?php
+
+  if(isset($_POST['nome']) || isset($_POST['email'])|| isset($_POST['telefone']) || isset($_POST['endereco']) || isset($_POST['senha']) || isset($_POST['senha_confir'])){
+    if(strlen($_POST['nome']) == 0 || strlen($_POST['email']) == 0 || strlen($_POST['telefone']) == 0 || strlen($_POST['endereco']) == 0 || strlen($_POST['senha']) == 0 || strlen($_POST['senha_confir']) == 0){
+      echo "Preencha todos os campos";
+    } else{
+      include('conexao.php');
+
+      $nome = $mysqli->real_escape_string($_POST['nome']);
+      $email = $mysqli->real_escape_string($_POST['email']);
+      $endereco = $mysqli->real_escape_string($_POST['endereco']);
+      $telefone = $mysqli->real_escape_string($_POST['telefone']);
+      $senha = $mysqli->real_escape_string($_POST['senha']);
+
+      $sql_code = "SELECT * FROM usuario WHERE email = '$email'";
+      $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código SQL:" . $mysqli->error);
+
+      if($sql_query->num_rows == 0){
+
+        $sql_code = "INSERT INTO `usuario` (`id`, `nome`, `email`, `endereco`, `telefone`, `senha`) VALUES (NULL, '$nome', '$email', '$endereco', '$telefone', '$senha');";
+        $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código SQL:" . $mysqli->error);
+
+        $sql_code = "SELECT * FROM usuario WHERE email = '$email' AND senha = '$senha';";
+        $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código SQL:" . $mysqli->error);
+
+
+        $usuario = $sql_query->fetch_assoc();
+
+        if(!isset($_SESSION)){
+          session_start();
+        }
+
+        $_SESSION['id'] = $usuario['id'];
+        $_SESSION['nome'] = $usuario['nome'];
+
+        header("Location: index.html");
+      }else{
+        echo "Email já cadastrado";
+      }
+    }
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="pt_BR">
   <head>
@@ -8,13 +51,14 @@
   </head>
   <body>
     <div class="box">
-      <form id="register-form">
+      <form id="register-form" method="POST">
         <fieldset>
           <legend><b>Cadatre-se</b></legend>
 
           <br />
 
           <div class="inputBox">
+            <label for="nome">Nome completo</label>
             <input
               type="text"
               name="nome"
@@ -24,24 +68,11 @@
               data-min-length="3"
               data-only-letters
             />
-            <label for="nome">Nome completo</label>
           </div>
           <br /><br />
 
           <div class="inputBox">
-            <input
-              type="text"
-              name="cpf"
-              id="cpf"
-              class="inputUser"
-              data-required
-              data-only-cpf
-            />
-            <label for="cpf">CPF</label>
-          </div>
-          <br /><br />
-
-          <div class="inputBox">
+            <label for="email">Email</label>
             <input
               type="email"
               name="email"
@@ -50,11 +81,11 @@
               data-required
               data-email-validate
             />
-            <label for="email">Email</label>
           </div>
           <br /><br />
 
           <div class="inputBox">
+            <label for="telefone">Telefone</label>
             <input
               type="tel"
               name="telefone"
@@ -63,11 +94,11 @@
               data-required
               data-only-phone
             />
-            <label for="telefone">Telefone</label>
           </div>
           <br /><br />
 
           <div class="inputBox">
+            <label for="endereco">Endereço</label>
             <input
               type="text"
               name="endereco"
@@ -76,11 +107,11 @@
               data-required
               data-only-url
             />
-            <label for="endereco">Endereço</label>
           </div>
           <br /><br />
 
           <div class="inputBox">
+            <label for="senha">Senha</label>
             <input
               type="text"
               name="senha"
@@ -89,10 +120,10 @@
               data-required
               data-only-url
             />
-            <label for="senha">Senha</label>
           </div>
           <br /><br />
           <div class="inputBox">
+            <label for="senha_confir">Confirme a Senha</label>
             <input
               type="text"
               name="senha_confir"
@@ -101,17 +132,14 @@
               data-required
               data-only-url
             />
-            <label for="senha_confir">Confirme a Senha</label>
           </div>
           <br /><br />
-          <button>
-            <a href="index.html" name="btn_cadastrar" id="btn_cadastrar">
+          <button type="submit">
               Cadastrar
-            </a>
           </button>
           <br /><br />
-          <button>
-            <a href="index.html" name="btn_voltar" id="btn_voltar"> Voltar </a>
+          <button onclick="history.go(-1)">
+            Cancelar
           </button>
         </fieldset>
       </form>
