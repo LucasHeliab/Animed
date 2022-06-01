@@ -6,11 +6,13 @@
     } else{
       include('conexao.php');
 
+      $criptografada = md5($_POST['senha']);
+
       $nome = $mysqli->real_escape_string($_POST['nome']);
       $email = $mysqli->real_escape_string($_POST['email']);
       $endereco = $mysqli->real_escape_string($_POST['endereco']);
       $telefone = $mysqli->real_escape_string($_POST['telefone']);
-      $senha = $mysqli->real_escape_string($_POST['senha']);
+      $senha = $mysqli->real_escape_string($criptografada);
 
       $sql_code = "SELECT * FROM usuario WHERE email = '$email'";
       $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código SQL:" . $mysqli->error);
@@ -33,7 +35,7 @@
         $_SESSION['id'] = $usuario['id'];
         $_SESSION['nome'] = $usuario['nome'];
 
-        header("Location: index.html");
+        header("Location: index.php");
       }else{
         echo "Email já cadastrado";
       }

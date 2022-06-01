@@ -5,9 +5,10 @@
       echo "Preencha seu e-mail e/ou senha";
     } else{
       include('conexao.php');
-
+      
+      $criptografada = md5($_POST['senha']);
       $email = $mysqli->real_escape_string($_POST['email']);
-      $senha = $mysqli->real_escape_string($_POST['senha']);
+      $senha = $mysqli->real_escape_string($criptografada);
 
       $sql_code = "SELECT * FROM usuario WHERE email = '$email' AND senha = '$senha'";
       $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código SQL:" . $mysqli->error);
@@ -23,10 +24,21 @@
         $_SESSION['id'] = $usuario['id'];
         $_SESSION['nome'] = $usuario['nome'];
 
-        header("Location: index.html");
+        header("Location: index.php");
       }else{
         echo "Falha ao logar! E-mail ou senha incorretos";
       }
+    }
+  }else{
+    if(!isset($_SESSION)){
+      session_start();
+    }
+    if(isset($_SESSION['id'])){
+      echo 'teste';
+      session_destroy();
+  
+      header("Location: index.php");
+
     }
   }
 ?>

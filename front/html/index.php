@@ -1,3 +1,8 @@
+<?php
+  if(!isset($_SESSION)){
+    session_start();
+  }
+?>
 <!DOCTYPE html>
 <html lang="pt-Br">
   <head>
@@ -7,14 +12,30 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
+    <?php
+      if(isset($_SESSION['id'])){
+        echo "Bem vindo ", $_SESSION['nome'];
+      }
+    ?>
     <header id="header">
       <div class="row vertical-justify col-12">
         <nav>
           <ul>
             <li class="col-2"><a href="index.html">Home</a></li>
             <li class="col-2"><a href="sobre.html">Sobre</a></li>
-            <li class="col-2"><a href="cadastro.php">Cadastre-se</a></li>
-            <li class="col-2"><a href="login.php">Login</a></li>
+            <?php
+              if(isset($_SESSION['id'])){
+                echo ('
+                  <li class="col-2"><a href="login.php">Logout</a></li>
+                ');
+              }else{
+                echo ('
+                  <li class="col-2"><a href="cadastro.php">Cadastre-se</a></li>
+                  <li class="col-2"><a href="login.php">Login</a></li>
+
+                ');
+              }
+            ?>
           </ul>
         </nav>
       </div>
