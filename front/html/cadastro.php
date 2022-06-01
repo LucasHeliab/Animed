@@ -3,6 +3,8 @@
   if(isset($_POST['nome']) || isset($_POST['email'])|| isset($_POST['telefone']) || isset($_POST['endereco']) || isset($_POST['senha']) || isset($_POST['senha_confir'])){
     if(strlen($_POST['nome']) == 0 || strlen($_POST['email']) == 0 || strlen($_POST['telefone']) == 0 || strlen($_POST['endereco']) == 0 || strlen($_POST['senha']) == 0 || strlen($_POST['senha_confir']) == 0){
       echo "Preencha todos os campos";
+    } else if($_POST['senha'] != $_POST['senha_confir']){
+      echo "As senhas dos campos senha e confirmar senha devem ser iguais!!";
     } else{
       include('conexao.php');
 
