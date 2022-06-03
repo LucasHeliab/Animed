@@ -33,7 +33,7 @@
   <header>
       <h1>Animed</h1>
       <nav>
-        <a href="index.pho">Home</a>
+        <a href="index.php">Home</a>
         <a href="sobre.php">Sobre</a>
         <?php
           if(isset($_SESSION['id'])){
