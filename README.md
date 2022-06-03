@@ -48,8 +48,8 @@ As ferramentas a seguir foram utilizadas para a construção do projeto:
 - 27/05/2022:
   - Estrutura básica do sistema com navegação entre páginas utilizando HTML.
 - 03/06/2022:
-_ Protótipo do banco de dados.
-_ Cadastro e login funcionando, apesar de ainda faltar recursos.
-_ Estilização do Cabeçalho e Rodapé.
-_ Utilização de somente uma página para os SERVIÇOS.
+  - Protótipo do banco de dados.
+  - Cadastro e login funcionando, apesar de ainda faltar recursos.
+  - Estilização do Cabeçalho e Rodapé.
+  - Utilização de somente uma página para os SERVIÇOS.
 <!--te-->
