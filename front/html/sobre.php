@@ -4,20 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sobre</title>
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <header id="header">
-      <div class="row vertical-justify col-12">
-        <nav>
-          <ul>
-            <li class="col-2"><a href="index.html">Home</a></li>
-            <li class="col-2"><a href="sobre.html">Sobre</a></li>
-            <li class="col-2"><a href="cadastro.html">Cadastre-se</a></li>
-            <li class="col-2"><a href="login.html">Login</a></li>
-          </ul>
-        </nav>
-      </div>
+  <header>
+      <h1>Animed</h1>
+      <nav>
+        <a href="index.php">Home</a>
+        <a href="sobre.php">Sobre</a>
+        <?php
+          if(isset($_SESSION['id'])){
+            echo ('
+              <a href="login.php">Logout</a>
+            ');
+          }else{
+            echo ('
+              <a href="cadastro.php">Cadastre-se</a>
+              <a href="login.php">Login</a>
+
+            ');
+          }
+        ?>
+      </nav>
     </header>
     <main>
       <div class="container">
@@ -29,8 +37,8 @@
         </div>
       </div>
     </main>
-    <footer id="footer" class="col-12">
-      <div class="row">
+    <footer>
+      <ul>
         <ul>
           <li id="servicos" class="col-3">Serviços</li>
         </ul>

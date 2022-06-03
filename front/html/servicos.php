@@ -27,19 +27,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $nome_page?></title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <header>
-      <div class="row vertical-justify col-12">
-        <nav>
-          <ul>
-            <li class="col-2"><a href="index.php">Home</a></li>
-            <li class="col-2"><a href="sobre.html">Sobre</a></li>
-            <li class="col-2"><a href="cadastro.html">Cadastre-se</a></li>
-            <li class="col-2"><a href="login.html">Login</a></li>
-          </ul>
-        </nav>
-      </div>
+  <header>
+      <h1>Animed</h1>
+      <nav>
+        <a href="index.pho">Home</a>
+        <a href="sobre.php">Sobre</a>
+        <?php
+          if(isset($_SESSION['id'])){
+            echo ('
+              <a href="login.php">Logout</a>
+            ');
+          }else{
+            echo ('
+              <a href="cadastro.php">Cadastre-se</a>
+              <a href="login.php">Login</a>
+
+            ');
+          }
+        ?>
+      </nav>
     </header>
     <main>
       <div class="container">
@@ -53,7 +62,7 @@
       </div>
     </main>
     <footer>
-      <div class="row">
+      <ul>
         <ul>
           <li id="servicos" class="col-3">Serviços</li>
         </ul>
