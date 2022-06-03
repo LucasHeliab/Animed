@@ -38,7 +38,7 @@
         $_SESSION['nome'] = $usuario['nome'];
 
         header("Location: index.php");
-      }else{
+      } else{
         echo "Email já cadastrado";
       }
     }

@@ -10,7 +10,7 @@
       $email = $mysqli->real_escape_string($_POST['email']);
       $senha = $mysqli->real_escape_string($criptografada);
 
-      $sql_code = "SELECT * FROM usuario WHERE email = '$email' AND senha = '$senha'";
+      $sql_code = "SELECT * FROM usuario WHERE email = '$email' AND senha = '$senha';";
       $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código SQL:" . $mysqli->error);
 
       if($sql_query->num_rows == 1){
@@ -34,7 +34,6 @@
       session_start();
     }
     if(isset($_SESSION['id'])){
-      echo 'teste';
       session_destroy();
   
       header("Location: index.php");
@@ -53,7 +52,7 @@
   </head>
   <body>
     <div class="box">
-      <form id="register-form" action="" method="POST">
+      <form id="login-form" action="" method="POST">
         <fieldset>
           <legend><b>Login</b></legend>
 
