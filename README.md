@@ -12,7 +12,7 @@
 - Baixar e intalar um dos servidores web abaixo:
   - [XAMPP](https://www.apachefriends.org/pt_br/index.html)
   - [LAMP](https://www.edivaldobrito.com.br/instale-lamp-no-linux-e-tenha-um-servidor-web-em-seu-pc/)
-- Executar o scrip database.sql que está no diretorio front/html/ .
+- Executar o scrip database.sql que está no diretorio front/html/ , para poder utilizar a base de dados.
 <!--te-->
 
 # Tabela de conteúdos
