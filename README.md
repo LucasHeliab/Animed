@@ -52,4 +52,10 @@ As ferramentas a seguir foram utilizadas para a construção do projeto:
   - Cadastro e login funcionando, apesar de ainda faltar recursos.
   - Estilização do Cabeçalho e Rodapé.
   - Utilização de somente uma página para os SERVIÇOS.
+- 24/06/2022:
+  - Banco de dados finalizado.
+  - Filtros/autenticações no cadastro de usuário.
+  - Cadastro de animais.
+  - Marcar horário em serviços especificos.
+  - Histórico de serviços por animal.
 <!--te-->
