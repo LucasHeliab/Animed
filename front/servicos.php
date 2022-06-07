@@ -30,26 +30,7 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-  <header>
-      <h1>Animed</h1>
-      <nav>
-        <a href="index.php">Home</a>
-        <a href="sobre.php">Sobre</a>
-        <?php
-          if(isset($_SESSION['id'])){
-            echo ('
-              <a href="login.php">Logout</a>
-            ');
-          }else{
-            echo ('
-              <a href="cadastro.php">Cadastre-se</a>
-              <a href="login.php">Login</a>
-
-            ');
-          }
-        ?>
-      </nav>
-    </header>
+    <?php include('header.php'); ?>
     <main>
       <div class="container">
         <div class="row col-12">
