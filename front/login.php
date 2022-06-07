@@ -47,49 +47,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="styles/login.css" />
     <title>Login</title>
   </head>
   <body>
     <div class="box">
       <form id="login-form" action="" method="POST">
-        <fieldset>
-          <legend><b>Login</b></legend>
+        <div class="inputBox">
+          <label for="email">E-mail</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="inputUser"
+            data-required
+          />
+        </div>
 
-          <br />
+        <div class="inputBox">
+          <label for="senha">Senha</label>
+          <input
+            type="password"
+            name="senha"
+            id="senha"
+            class="inputUser"
+            data-required
+          />
+        </div>
 
-          <div class="inputBox">
-            <label for="email">E-mail</label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              class="inputUser"
-              data-required
-            />
-          </div>
-          <br /><br />
-
-          <div class="inputBox">
-            <label for="senha">Senha</label>
-            <input
-              type="password"
-              name="senha"
-              id="senha"
-              class="inputUser"
-              data-required
-            />
-          </div>
-          <br /><br />
-
-          <button type="submit">
-             Login 
-          </button>
-          <br /><br />
+        <div class="buttons">
           <button onclick="history.go(-1)">
             Cancelar
           </button>
-        </fieldset>
+          <button type="submit">
+              Login 
+          </button>
+        </div>
+
       </form>
     </div>
     <p class="error-validation template"></p>

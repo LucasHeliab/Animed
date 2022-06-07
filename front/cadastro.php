@@ -122,7 +122,6 @@
               id="senha"
               class="inputUser"
               data-required
-              data-only-url
             />
           </div>
           <br /><br />
@@ -134,7 +133,6 @@
               id="senha_confir"
               class="inputUser"
               data-required
-              data-only-url
             />
           </div>
           <br /><br />
