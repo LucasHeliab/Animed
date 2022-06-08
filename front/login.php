@@ -76,10 +76,10 @@
         </div>
 
         <div class="buttons">
-          <button onclick="history.go(-1)">
+          <button class="cancelar" onclick="history.go(-1)">
             Cancelar
           </button>
-          <button type="submit">
+          <button class="login" type="submit">
               Login 
           </button>
         </div>

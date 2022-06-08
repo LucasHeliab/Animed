@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+:root {
+  --cor1: #9ae0c8;
+  --cor2: #65cfa6;
+  --cor3: #3ea07b;
+  --cor4: #007045;
+  --cor5: #04442c;
+}
+
+.box {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+}
+
+.buttons {
+  text-align: center;
+}
+
+.buttons button {
+  width: 100px;
+}
+
+.buttons .login {
+  border: 1px solid var(--cor4);
+  background-color: var(--cor4);
+  color: white;
+  border-radius: 5px;
+}
+
+.buttons .login:hover {
+  background-color: var(--cor1);
+  color: var(--cor5);
+  border-radius: 5px;
+}
+
+.inputBox {
+  width: 95%;
+  margin-bottom: 20px;
+}
+
+.inputBox .inputUser {
+  width: 100%;
+  height: 30px;
+}
