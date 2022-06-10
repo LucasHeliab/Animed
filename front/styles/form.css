@@ -21,19 +21,19 @@
 
 .buttons button {
   width: 100px;
+  height: 20px;
 }
 
 .buttons .login {
   border: 1px solid var(--cor4);
   background-color: var(--cor4);
+  border-radius: 3px;
   color: white;
-  border-radius: 5px;
 }
 
 .buttons .login:hover {
   background-color: var(--cor1);
   color: var(--cor5);
-  border-radius: 5px;
 }
 
 .inputBox {
