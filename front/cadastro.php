@@ -50,7 +50,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="styles/form.css" />
     <title>Cadastro</title>
   </head>
   <body>
@@ -73,8 +73,7 @@
               data-only-letters
             />
           </div>
-          <br /><br />
-
+          
           <div class="inputBox">
             <label for="email">Email</label>
             <input
@@ -86,8 +85,7 @@
               data-email-validate
             />
           </div>
-          <br /><br />
-
+          
           <div class="inputBox">
             <label for="telefone">Telefone</label>
             <input
@@ -99,8 +97,7 @@
               data-only-phone
             />
           </div>
-          <br /><br />
-
+          
           <div class="inputBox">
             <label for="endereco">Endereço</label>
             <input
@@ -112,8 +109,7 @@
               data-only-url
             />
           </div>
-          <br /><br />
-
+         
           <div class="inputBox">
             <label for="senha">Senha</label>
             <input
@@ -124,7 +120,7 @@
               data-required
             />
           </div>
-          <br /><br />
+       
           <div class="inputBox">
             <label for="senha_confir">Confirme a Senha</label>
             <input
@@ -135,14 +131,15 @@
               data-required
             />
           </div>
-          <br /><br />
-          <button type="submit">
-              Cadastrar
-          </button>
-          <br /><br />
-          <button onclick="history.go(-1)">
-            Cancelar
-          </button>
+          
+          <div class="buttons">
+            <button class="cancelar" onclick="history.go(-1)">
+              Cancelar
+            </button>
+            <button class="login" type="submit">
+                Cadastre-se 
+            </button>
+          </div>
         </fieldset>
       </form>
     </div>

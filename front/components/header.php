@@ -1,5 +1,6 @@
 <header>
   <div class="side-left">
+    <img src="img/logo.png" alt="logo" width="60">
     <h1>Animed</h1>
   </div>
 
