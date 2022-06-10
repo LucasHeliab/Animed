@@ -20,37 +20,52 @@
     ?>
     <main>
       <div class="container">
-        <div class="row col-12">
+        <div class="item">
           <a href="servicos.php?type=1" class="col-4">
             <div>
               <img src="" class="img-serv" />
               <h1>Consultas</h1>
             </div>
           </a>
+        </div>
+
+        <div class="item">
           <a href="servicos.php?type=2" class="col-4">
             <div>
               <img src="" class="img-serv" />
               <h1>UTI</h1>
             </div>
           </a>
+        </div>
+        
+        <div class="item">
           <a href="servicos.php?type=3" class="col-4">
             <div>
               <img src="" class="img-serv" />
               <h1>Exames Laboratoriais</h1>
             </div>
           </a>
+        </div>
+
+        <div class="item">
           <a href="servicos.php?type=4" class="col-4">
             <div>
               <img src="" class="img-serv" />
               <h1>Cirurgias</h1>
             </div>
           </a>
+        </div>
+
+        <div class="item">
           <a href="servicos.php?type=5" class="col-4">
             <div>
               <img src="" class="img-serv" />
               <h1>Taxi Pet</h1>
             </div>
           </a>
+        </div>
+
+        <div class="item">
           <a href="servicos.php?type=6 Veterinária" class="col-4">
             <div>
               <img src="" class="img-serv" />

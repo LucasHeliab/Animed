@@ -63,6 +63,22 @@ header .side-right nav a:hover {
   color: var(--cor4)
 }
 
+main .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+main .container .item {
+  height: 200px;
+  margin: 10px;
+  border-radius: 10px;
+  text-align: center;
+  align-items: center;
+  border: 5px solid var(--cor1);
+}
+
 footer {
   text-align: center;
   background-color: var(--cor3);
