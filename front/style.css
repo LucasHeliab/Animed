@@ -80,17 +80,25 @@ main .container .item {
 }
 
 footer {
-  text-align: center;
+  width: 85%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   background-color: var(--cor3);
   color: white;
-  font-weight: bold;
   min-height: 50px;
-  padding-top: 50px;
-  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  padding-left: 15vw;
+  padding-right: auto;
   position: absolute;
   bottom: 0;
+  list-style-type: none;
 }
 
-footer > ul {
-  columns: 3;
+footer > ul{
+  list-style-type: none;
+}
+
+#item {
+  list-style-type: none;
 }
