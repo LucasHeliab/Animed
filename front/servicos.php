@@ -32,12 +32,12 @@
   <body>
     <?php include('components/header.php'); ?>
     <main>
-      <div class="container">
-        <div class="row col-12">
+      <div class="box">
+        <div class="descricao">
           <h2><?php echo $nome_page?></h2>
-          <img src="<?php echo $imagem_page?>" alt="imagem" />
-          <div>
-            <h3><?php echo $descricao_page?></h3>
+          <img src="<?php echo $imagem_page?>" class="img-serv" />
+          <div class="text">
+            <p><?php echo $descricao_page?></p>
           </div>
         </div>
       </div>

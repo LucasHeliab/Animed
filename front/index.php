@@ -2,6 +2,7 @@
   if(!isset($_SESSION)){
     session_start();
   }
+  include('conexao.php');
 ?>
 <!DOCTYPE html>
 <html lang="pt-Br">
@@ -20,59 +21,23 @@
     ?>
     <main>
       <div class="container">
-        <div class="item">
-          <a href="servicos.php?type=1" class="col-4">
-            <div>
-              <img src="" class="img-serv" />
-              <h1>Consultas</h1>
-            </div>
-          </a>
-        </div>
+        <?php
+          $sql_code = "SELECT * FROM servicos";
+          $sql_query = $mysqli->query($sql_code) or die("Falha na execução do código SQL:" . $mysqli->error);
 
-        <div class="item">
-          <a href="servicos.php?type=2" class="col-4">
-            <div>
-              <img src="" class="img-serv" />
-              <h1>UTI</h1>
-            </div>
-          </a>
-        </div>
-        
-        <div class="item">
-          <a href="servicos.php?type=3" class="col-4">
-            <div>
-              <img src="" class="img-serv" />
-              <h1>Exames Laboratoriais</h1>
-            </div>
-          </a>
-        </div>
-
-        <div class="item">
-          <a href="servicos.php?type=4" class="col-4">
-            <div>
-              <img src="" class="img-serv" />
-              <h1>Cirurgias</h1>
-            </div>
-          </a>
-        </div>
-
-        <div class="item">
-          <a href="servicos.php?type=5" class="col-4">
-            <div>
-              <img src="" class="img-serv" />
-              <h1>Taxi Pet</h1>
-            </div>
-          </a>
-        </div>
-
-        <div class="item">
-          <a href="servicos.php?type=6 Veterinária" class="col-4">
-            <div>
-              <img src="" class="img-serv" />
-              <h1>Farmácia Veterinária</h1>
-            </div>
-          </a>
-        </div>
+          for($i = 1; $servico = $sql_query->fetch_row(); $i++){
+            $text = '
+            <div class="item">
+              <a href="servicos.php?type='.$i.'">
+                <div>
+                  <img src="'.$servico[3].'" class="img-serv">
+                  <h1>'.$servico[1].'</h1>
+                </div>
+              </a>
+            </div>';
+            echo $text;
+          }
+        ?>
       </div>
     </main>
     <?php include('components/footer.php');?>

@@ -53,37 +53,39 @@
   <body>
     <div class="box">
       <form id="login-form" action="" method="POST">
-        <div class="inputBox">
-          <label for="email">E-mail</label>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            class="inputUser"
-            data-required
-          />
-        </div>
-
-        <div class="inputBox">
-          <label for="senha">Senha</label>
-          <input
-            type="password"
-            name="senha"
-            id="senha"
-            class="inputUser"
-            data-required
-          />
-        </div>
-
-        <div class="buttons">
-          <button class="cancelar" onclick="history.go(-1)">
-            Cancelar
-          </button>
-          <button class="login" type="submit">
-              Login 
-          </button>
-        </div>
-
+        <fieldset>
+          <legend><b>Login</b></legend>
+          <div class="inputBox">
+            <label for="email">E-mail</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="inputUser"
+              data-required
+            />
+          </div>
+  
+          <div class="inputBox">
+            <label for="senha">Senha</label>
+            <input
+              type="password"
+              name="senha"
+              id="senha"
+              class="inputUser"
+              data-required
+            />
+          </div>
+  
+          <div class="buttons">
+            <button class="cancelar" onclick="history.go(-1)">
+              Cancelar
+            </button>
+            <button class="login" type="submit">
+                Login 
+            </button>
+          </div>
+        </fieldset>
       </form>
     </div>
     <p class="error-validation template"></p>

@@ -57,7 +57,7 @@
     <div class="box">
       <form id="register-form" method="POST">
         <fieldset>
-          <legend><b>Cadatre-se</b></legend>
+          <legend><b>Cadastre-se</b></legend>
 
           <br />
 

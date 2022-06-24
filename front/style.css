@@ -71,34 +71,128 @@ main .container {
 }
 
 main .container .item {
-  height: 200px;
-  margin: 10px;
+  height: 250px;
+  margin: 20px;
+  margin-top: 30px;
   border-radius: 10px;
   text-align: center;
   align-items: center;
   border: 5px solid var(--cor1);
+  text-decoration: none;
+}
+
+main .container .item a{
+  color: black;
+  text-decoration: none;
+}
+
+main .container .item a div .img-serv {
+  float: center;
+  height: 150px;
+  width: 35%;
+  padding: 10px;
+  margin: 10px 10px;
+}
+
+main .box .descricao {
+  text-align: center;
+  margin: 15px;
+}
+
+main .box .descricao .img-serv {
+  float: center;
+  width: 10%;
+  height: 15%;
+  padding: 10px;
+  margin: 10px 10px;
+}
+
+main .list{
+  margin-top: 5%;
+  margin-left: 20%;
+  margin-right: 20%;
+  align-items: center;
+  padding: 5%;
+}
+
+main .list table{
+  margin-left: 27%;
+}
+
+#list-head{
+  border: 3px solid black;
+  font-weight: bold;
+  font-size: large;
+}
+
+th{
+  border: 2px solid black;
+  color: black;
+  font-weight: lighter;
+  padding: 2%;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+main .list div{
+  padding-top: 30%
+}
+
+main .list div a {
+  border: 1px solid black;
+  text-decoration: none;
+  color: white;
+  background-color: var(--cor4);
+  margin: 0 10px;
+  margin-top: 30%;
+  margin-left: 43%;
+  margin-right: 40%;
+  font-size: 15px;
+  border-radius: 10px;
+  border: 1px solid var(--cor4);
+  padding: 10px;
+}
+
+main .list div a:hover{
+  background-color: var(--cor1);
+  color: var(--cor4)
+}
+
+main .box .descricao .text{
+  margin: 0 20%;
+  text-align: justify;
+  font-weight: lighter;
 }
 
 footer {
-  width: 85%;
+  width: 80%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   background-color: var(--cor3);
   color: white;
   min-height: 50px;
   padding-top: 30px;
   padding-bottom: 20px;
-  padding-left: 15vw;
+  padding-left: 20%;
   padding-right: auto;
   position: absolute;
   bottom: 0;
-  list-style-type: none;
 }
 
 footer > ul{
   list-style-type: none;
+  margin-left: 15%;
 }
 
 #item {
+  list-style-type: none;
+}
+
+footer > ul > li > ul > li > a{
+  color: white;
+  text-decoration: none;
+}
+
+footer > ul  > li > ul > li {
   list-style-type: none;
 }

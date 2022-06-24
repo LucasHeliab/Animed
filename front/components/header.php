@@ -11,6 +11,7 @@
       <?php
         if (isset($_SESSION['id'])) {
           echo ('
+                <a href="myPets.php">Meus Pets</a>
                 <a href="login.php">Logout</a>
               ');
         } else {
