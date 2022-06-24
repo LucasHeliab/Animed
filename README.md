@@ -25,7 +25,7 @@
 - Página SOBRE
 - Página CADASTRO
 - Página SERVIÇOS
-  _ Cirurgias
+  - Cirurgias
   _ Consultas
   _ Exames Laboratoriais
   _ Farmácia
