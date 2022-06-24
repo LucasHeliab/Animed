@@ -13,6 +13,7 @@
   - [XAMPP](https://www.apachefriends.org/pt_br/index.html)
   - [LAMP](https://www.edivaldobrito.com.br/instale-lamp-no-linux-e-tenha-um-servidor-web-em-seu-pc/)
 - Executar o scrip database.sql que está no diretorio front/html/ , para poder utilizar a base de dados.
+- Modificar as credencias no arquivo conexao.php para as credenciais do seu servidor.
 <!--te-->
 
 # Tabela de conteúdos
