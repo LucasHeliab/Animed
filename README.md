@@ -25,12 +25,14 @@
 - Página SOBRE
 - Página CADASTRO
 - Página SERVIÇOS
-_ Cirurgias
-_ Consultas
-_ Exames Laboratoriais
-_ Farmácia
-_ Taxi-Pet
-_ UTI
+  _ Cirurgias
+  _ Consultas
+  _ Exames Laboratoriais
+  _ Farmácia
+  _ Taxi-Pet
+  _ UTI
+- Página CADASTRO PETS
+- Página MY PETS
 <!--te-->
 
 ### Tecnologias
