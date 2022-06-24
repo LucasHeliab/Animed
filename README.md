@@ -26,11 +26,11 @@
 - Página CADASTRO
 - Página SERVIÇOS
   - Cirurgias
-  _ Consultas
-  _ Exames Laboratoriais
-  _ Farmácia
-  _ Taxi-Pet
-  _ UTI
+  - Consultas
+  - Exames Laboratoriais
+  - Farmácia
+  - Taxi-Pet
+  - UTI
 - Página CADASTRO PETS
 - Página MY PETS
 <!--te-->
